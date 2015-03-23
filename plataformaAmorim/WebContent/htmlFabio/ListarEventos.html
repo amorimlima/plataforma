@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Secretaria</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/ListarEventos.css" />
+
+	</head>
+
+	<body>
+
+		<!--Conteudo Total-->
+
+		<div id="Container">
+
+			<!--Cabecalho 1 - Navegação-->
+
+			<div id="Cabecalho_Menu_Area">
+				<div id="Cabecalho_Menu_Area_Menu1"><a href="#">Home</a> | <a href="#">Secretaria</a></div>
+				<div id="Cabecalho_Menu_Area_Menu2"><a href="#">Voltar</a> |  <a href="#">Sair</a></div>
+			</div>
+
+			<!--Perfil do usuário, neste caso, o aluno-->
+
+			<div id="Cabecalho_Perfil_Area">
+
+				<div id="Cabecalho_Perfil_Area_Foto_Content">
+
+					<!--Foto do usuário, neste caso, do aluno-->
+
+					<div id="Cabecalho_Perfil_Area_Foto">
+						<!--<img src="img/FotoMestre.png"></img>-->
+					</div>
+				</div>
+
+				<!--Nome | Serie do usuário-->
+
+				<div id="Cabecalho_Perfil_Area_Descricao_Content">
+
+					<div id="Cabecalho_Perfil_Area_Descricao">João Botelho</div>
+				</div>
+				
+			</div>
+
+
+
+			<div id="Conteudo_Area">
+
+			<!--Coluna a esquerda-->
+
+				<div class="Conteudo_Coluna" id="Coluna1">
+
+					<!--Menu lateral-->
+
+					<div id="Conteudo_Coluna1_Menu">
+
+						<div class="Conteudo_Coluna1_Menu_Opcao">
+							<div class="Conteudo_Coluna1_Menu_Opcao_Imagem"><img src="img/O1.png"></img></div>
+							<div class="Conteudo_Coluna1_Menu_Opcao_Nome">Plano de estudo</div>
+						</div>
+
+						<div class="Conteudo_Coluna1_Menu_Opcao">
+							<div class="Conteudo_Coluna1_Menu_Opcao_Imagem"><img src="img/O2.png"></img></div>
+							<div class="Conteudo_Coluna1_Menu_Opcao_Nome">Livros</div>
+						</div>
+						<div class="Conteudo_Coluna1_Menu_Opcao">
+							<div class="Conteudo_Coluna1_Menu_Opcao_Imagem"><img src="img/O3.png"></img></div>
+							<div class="Conteudo_Coluna1_Menu_Opcao_Nome">Roteiros</div>
+						</div>
+						<div class="Conteudo_Coluna1_Menu_Opcao">
+							<div class="Conteudo_Coluna1_Menu_Opcao_Imagem"><img src="img/O4.png"></img></div>
+							<div class="Conteudo_Coluna1_Menu_Opcao_Nome">Fórum</div>
+						</div>
+						<div class="Conteudo_Coluna1_Menu_Opcao">
+							<div class="Conteudo_Coluna1_Menu_Opcao_Imagem"><img src="img/O5.png"></img></div>
+							<div class="Conteudo_Coluna1_Menu_Opcao_Nome">Notificações</div>
+						</div>
+
+					</div>
+
+					<!--Calendario-->
+
+
+					<div id="Conteudo_Coluna1_Calendario">
+
+						<table>
+							<tr><td class="leftArrow"></td><td COLSPAN=5 class="CalendarioTitle">JANEIRO 2014</td><td class="rightArrow"></td></tr>
+							<tr><td class="FonteCorFimDeSemana">D</td><td class="FonteCorDiaDeSemana">S</td><td class="FonteCorDiaDeSemana">T</td><td class="FonteCorDiaDeSemana">Q</td><td class="FonteCorDiaDeSemana">Q</td><td class="FonteCorDiaDeSemana">S</td><td class="FonteCorFimDeSemana">S</td></tr>
+							<tr><td>29</td><td>30</td><td>31</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+							<tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+							<tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+							<tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+							<tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>1</td><td>2</td></tr>
+							<tr><td COLSPAN=6 class="rodapeCalendario"> Apontar Presença grupo </td><td class="Calendario_Aviso rodapeCalendario"></td></tr>
+						</table>
+
+					</div>
+
+				</div>
+
+				<!--Coluna central-->
+		<div class="Conteudo_Aluno" id="Coluna2">
+
+			<div id="TabelaPopUp">
+
+				<div class="TabelaPopUpHeader">
+					<a href="#" onclick="ClosePopUp();">Fechar</a>
+				</div>
+
+
+				<div class="TabelaPopUpBody">
+
+					<!-- Tela Form Selecionar Filtro-->
+					<div id="SelecionarFiltroFrame">
+						<div id="Evento_content" class="content">
+							<form name="frmEvento" id="frmEvento" >					
+								<input type="hidden" name="id" id="id"  /> 					
+								<input type="hidden" name="action" id="action"  /> 						
+								<table>				
+									<tr> 				
+										<td>Ano Letivo: </td> 				
+										<td>	
+											<select id="anoLetivo" name="Anos" class="selectWidth"> </select>
+										</td>				
+									</tr>				
+									<tr> 				
+										<td>Tipo de Evento: </td> 				
+										<td>	
+											<select id="tipoEvento" name="tipoEvento" class="selectWidth"> </select>
+										</td>
+									</tr> 				
+									<tr> 				
+										<td>Data de Inicio: </td> 
+										<td> 
+											<input type="date" name="dataInicio" id="dataInicio">  
+										</td>				
+									</tr> 				
+									<tr> 				
+										<td>Data de Fim: </td> 
+										<td> <input type="date" name="dataFim" id="dataFim" >  </td>				
+									</tr> 			
+									<tr>							
+										<td>Evento: </td>										
+										<td>
+											<select id="descricaoEvento" name="descricaoEvento" class="selectWidth eventoDescricao"> </select>
+										</td>
+									</tr>					
+								</table>					
+							</form>																										
+						</div>
+					</div>
+
+					<!--Tela Form Cadastro-->
+
+					<div id="CadastroFrame">
+						<form name="frmEvento" id="frmEvento" method="POST" >
+							<input type="hidden" name="id" id="id" />
+							<input type="hidden" name="action" id="action" />
+							<table>
+								<tr> 
+									<td>Evento: </td> 
+									<td> 
+										<input type="text" name="evento" id="evento"  /> 
+									</td>
+								</tr> 
+								<tr>
+									<td>Data Inicio: </td> 
+									<td> 
+										<input type="date" name="dataInicio" id="dataInicio"> 
+									</td>
+								</tr> 
+								<tr> 
+									<td>Data Fim: </td> 
+									<td> 
+										<input type="date" name="dataFim" id="dataFim" >  
+									</td>	
+								</tr> 
+								<tr> 
+									<td>Ano Letivo: </td> 
+									<td>
+										<select id="anoLetivo" name="anoLetivo"> </select>	
+									</td>
+								</tr>
+								<tr>
+									<td>Tipo do Evento: </td> 
+									<td> 
+										<select id="tipoEvento" name="tipoEvento"> </select>
+									</td>
+									<td>
+										<input type="button" class="BotaoNovo" onclick="NovoTipoEvento();" value="Novo Tipo de Evento">
+									</td>
+								</tr> </table>
+								<!-- <tr>
+									<td colspan="2">  -->
+										<input	type="submit" class="BotaoNovo" name="btnSubmit" id="btnSubmit" value="Salvar" /> 
+									<!-- </td> 
+								</tr> -->
+							
+						</form>
+					</div>
+
+
+					<!-- Editar Dados Tabela-->
+
+					<div id="EdicaoFrame">
+						<form name="frmEvento" id="frmEvento" method="POST" >
+							<input type="hidden" name="id" id="id" />
+							<input type="hidden" name="action" id="action" />
+							<table>
+								<tr> 
+									<td>Evento: </td> 
+									<td> 
+										<input type="text" name="evento" id="evento" /> 
+									</td>
+								</tr> 
+								<tr>
+									<td>Data Inicio: </td> 
+									<td> 
+										<input type="date" name="dataInicio" id="dataInicio"> 
+									</td>
+								</tr> 
+								<tr> 
+									<td>Data Fim: </td> 
+									<td> 
+										<input type="date" name="dataFim" id="dataFim">  
+									</td>	
+								</tr>
+								<tr> 
+									<td>Ano Letivo: </td> 
+									<td>
+										<select id="anoLetivo" name="anoLetivo"> 
+										</select>	
+									</td>
+								</tr>
+								<tr>
+									<td>Tipo do Evento: </td> 
+									<td> 
+										<select id="tipoEvento" name="tipoEvento"> 
+										</select>
+									</td>
+								</tr> </table>
+								<!-- <tr>
+									<td colspan="2">  -->
+										<input	type="submit" class="BotaoNovo" name="btnSubmit" id="btnSubmit" value="Salvar Alterações" /> 
+									<!-- </td> 
+								</tr> -->
+							
+						</form>
+					</div>
+
+
+					<!--Visualizar retorno de Filtro-->
+
+					<div id="ListarFiltroFrame">
+						<div id="PesquisaResultado_content" class="content">
+							<form name="frmEvento" id="frmEvento" method="POST">
+								<input type="hidden" name="id" id="id" />
+								<input type="hidden" name="action" id="action" />
+									<div id="ContentResultadosFiltro">
+									</div>
+							</form>
+						</div>
+					</div>
+
+					<!-- Adicionar TipoEvento -->
+
+
+					<div id="CadastroTipoEventoFrame">
+						<div id="PesquisaResultado_TipoCadastro" class="content" style="width:50%;float:left;border-right:solid thin #DDD;">
+							<form name="frmEvento" id="frmEvento" method="POST">
+								<input type="hidden" name="id" id="id" />
+								<input type="hidden" name="action" id="action" />
+								<table>
+									<tr> 
+										<td>Tipo de Evento : </td><td><input type="text" name="evento" id="evento" /></td>
+									</tr>
+									<tr>
+										<td>
+										</td>
+									</tr>
+								</table>
+											<input id="NovoTipoButton" class="BotaoNovo" type="submit" value="Criar" />
+							</form>
+						</div>
+
+						<div id="PesquisaResultado_TipoList" class="content" style="width:50%;float:left;">
+							<form name="frmEvento" id="frmEvento" method="POST">
+								<input type="hidden" name="id" id="id" />
+								<input type="hidden" name="action" id="action" />
+									<table>
+										<tr> 
+											<td><select id="ContentResultadosTipoEvento" name="ContentResultadosTipoEvento"></select></td>
+										</tr>
+									</table>
+							</form>
+					<input id="VoltarCadastroEventoButton" class="BotaoNovo FloatRightB" type="button" onclick="TrocarFrame('CadastroFrame');" value="Voltar" />
+
+					<input id="IrEdicaoTipoButton" class="BotaoNovo FloatRightB" type="button" onclick="TrocarFrame('EdicaoTipoEventoFrame');" value="Editar" />
+						</div>
+				
+				
+					</div>
+
+
+
+					<!-- Modificar TipoEvento -->
+
+
+
+					<div id="EdicaoTipoEventoFrame">
+						<form name="frmEvento" id="frmEvento" method="POST" >
+							<input type="hidden" name="id" id="id" />
+							<input type="hidden" name="action" id="action" />
+							<table>
+								<tr> 
+									<td>Evento: </td> 
+									<td> 
+										<input type="text" name="evento" id="evento" /> 
+									</td>
+								</tr> 
+								<tr>
+									<td>Data Inicio: </td> 
+									<td> 
+										<input type="date" name="dataInicio" id="dataInicio"> 
+									</td>
+								</tr> 
+								<tr> 
+									<td>Data Fim: </td> 
+									<td> 
+										<input type="date" name="dataFim" id="dataFim">  
+									</td>	
+								</tr>
+								<tr> 
+									<td>Ano Letivo: </td> 
+									<td>
+										<select id="anoLetivo" name="anoLetivo"> 
+										</select>	
+									</td>
+								</tr>
+								<tr>
+									<td>Tipo do Evento: </td> 
+									<td> 
+										<select id="tipoEvento" name="tipoEvento"> 
+										</select>
+									</td>
+								</tr> </table>
+								<!-- <tr>
+									<td colspan="2">  -->
+										<input	type="submit" class="BotaoNovo" name="btnSubmit" id="btnSubmit" value="Salvar Alterações" /> 
+									<!-- </td> 
+								</tr> -->
+							
+						</form>
+					</div>
+
+
+					<!---->
+
+
+					<input id="NewButton" class="BotaoNovo" type="button" onclick="CadastroFrame();" value="Novo" />
+
+					<input id="SearchButton" class="BotaoNovo FloatRightB" type="button" onclick="FiltrarEventos();" value="Pesquisar" />
+
+					<input id="CancelButton" class="BotaoNovo FloatRightB" type="button" onclick="FramesPopUp(6);" value="Cancelar" />
+
+					<input id="DeleteButton" class="BotaoNovo FloatRightB" type="button" onclick="deleteEvent();" value="Excluir" />
+
+					<input id="VisualizaSelecaoButton" class="BotaoNovo" type="button" onclick="PopUpIdTabela();" value="Visualizar" />
+
+
+				</div>
+
+
+				
+
+			</div>
+
+				<!-- <div class="OrderSorting">
+
+
+					<div class="leftOrder">
+
+						<form action="" > 
+							<table>
+								<tr>
+									<td><label>Tipo Evento : </label></td>
+									<td><select id="TipoEventoLista"></select></td>
+								</tr>
+
+								<tr>
+									<td><label>Nome Evento : </label></td>
+									<td><select id="NomeEventoLista"></select></td>
+								</tr>
+								
+								<tr>
+									<td><label>Ano Letivo : </label></td>
+									<td><select id="LetivoEventoLista"></select></td>
+								</tr>
+								<tr>
+									<td></td><td><input type="button" value="Procurar" style="float:right;" onclick="FiltrarEventos();" /></td>
+								</tr>
+								
+							</table>
+						
+
+					</div>
+
+
+					<div class="rightOrder" style="display:none;">
+
+						
+
+							<tr><td><label>Ordenar por : </label></td>
+								<td><select id="OrdenarEventoLista">
+									<option value="EventoLeftSide">Nome do Evento</option>
+									<option value="EventoRightSide"> Ano Letivo</option>
+									<option value="TDataInicio"> Data de Inicio</option>
+								</select></td>
+							</tr>
+							<tr>
+								<p />-->
+								<input style="display:none;" type="radio" id="Ordem" name="Ordem" value="C" checked>
+								<input style="display:none;" type="radio" id="Ordem2" name="Ordem" value="D">
+							<!--</tr>
+							<tr>
+								<br />
+								
+							</tr>
+						</form>
+
+					</div>
+
+
+
+				</div> -->
+
+				<div class="total">
+
+					<div id="Manutencao_content" class="content"> 
+					<div id="Manutencao_Titulo">Manutenção</div>
+					
+						<ul>
+							<li> Aluno </li>
+							<li> Roteiro </li>
+							<li> Tutoria </li>
+							<li> Programa Social </li>
+							<li> Professor </li>
+							<li onclick="FramesPopUp(6);"> Evento </li>
+						</ul>
+					
+					</div>
+
+
+					
+					
+				<!-- <div class="Conteudo_Coluna2_Evento">
+					<table id="tbConteudo">
+						<tr>
+						 	<td>Evento</td>
+							<td>Data</td>
+						</tr>
+						<tr><td>Data de Inicio:</td> 	<td> </td>		</tr>
+						<tr><td>Data de Termino:</td> 	<td> </td>		</tr>
+						<tr><td>TipoEvento:</td> 		<td> </td>		</tr>
+					</table>
+					</div> -->
+					<!-- <div class="Conteudo_Coluna2_Evento">
+					<div class="TituloEvento">
+						<div class="EventoLeftSide">Evento</div>
+						<div class="EventoRightSide">Ano Letivo</div>
+					</div>
+					<div class="ContextoEvento">
+					<table>
+						<tr><td>Data de Inicio : </td><td></td></tr>
+						<tr><td>Data de Termino : </td><td></td></tr>
+						<tr><td>TipoEvento</td><td></td></tr>
+						<tr><td></td><td></td></tr>
+					</table>
+					</div>
+					</div> -->
+
+					
+				</div>
+				</div>
+				</div>
+				
+			</div>
+
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/script.js"></script>
+		<script type="text/javascript" src="js/cadastroEventos.js"></script>
+		<script type="text/javascript" src="js/listarEventos.js"></script>
+	
+	</body>
+</html>

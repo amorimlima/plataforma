@@ -1,0 +1,77 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Consumindo Servico</title>
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script src="cadastrarEventos.js"></script>
+
+</head>
+
+<body>
+
+	<div>
+		<form name="frmEvento" id="frmEvento" method="POST" enctype="multipart/form-data">
+		<input type="hidden" name="id" id="id"  /> 
+		<input type="hidden" name="action" id="action"  /> 
+		
+		<table>
+		<tr> 
+		<td>Evento: </td> <td> <input type="text" name="evento" id="evento"  />   </td>
+		</tr> <tr> 
+		<td>Data Inicio: </td> <td> <input type="date" name="dataInicio" id="dataInicio">  </td>
+		</tr> <tr> 
+		<td>Data Fim: </td> <td> <input type="date" name="dataFim" id="dataFim" >  </td>
+		</tr> <tr> 
+		<td>Ano Letivo: </td> <td> 
+		
+		<select id="anoLetivo" name="anoLetivo"> </select>
+		
+		
+		
+		</td>
+		</tr>
+		<tr>
+		
+		<td>Tipo do Evento: </td> <td> 
+		
+		<select id="tipoEvento" name="tipoEvento"> </select>
+		
+		
+		
+		</td>
+		
+		
+		</tr> <tr> 
+		<td colspan="2"> <input
+				type="submit" name="btnSubmit" id="btnSubmit" /> </td> 
+		
+		
+		</tr>
+		
+		</table>
+		
+		
+
+ 
+
+       <p>
+
+        Select a file : <input type="file" name="imagem" size="50" id="imagem" />
+
+       </p>
+
+ 
+
+       
+		
+			
+		</form>
+
+
+	</div>
+</body>
+</html>
+
